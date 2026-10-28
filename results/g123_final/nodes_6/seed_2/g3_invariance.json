@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "episodes": [
+    {
+      "seed": 30000,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.142235077629427,
+        "downlink_j": 0.1465450428965971,
+        "gpu_prefill_increment_j": 1738.3441732343854,
+        "gpu_decode_increment_j": 1552.892542897901,
+        "gpu_idle_baseline_j": 18000.0,
+        "total_j": 21291.525496252812
+      }
+    },
+    {
+      "seed": 30001,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.09088027432526746,
+        "downlink_j": 0.15173667430962623,
+        "gpu_prefill_increment_j": 1829.1166380065988,
+        "gpu_decode_increment_j": 1674.2889155406754,
+        "gpu_idle_baseline_j": 18000.0,
+        "total_j": 21503.648170495908
+      }
+    },
+    {
+      "seed": 30002,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.10120900783083986,
+        "downlink_j": 0.16163580651763154,
+        "gpu_prefill_increment_j": 1708.782336156619,
+        "gpu_decode_increment_j": 1578.8748661898978,
+        "gpu_idle_baseline_j": 18000.0,
+        "total_j": 21287.920047160864
+      }
+    },
+    {
+      "seed": 30003,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.09705682447878883,
+        "downlink_j": 0.14340688710989413,
+        "gpu_prefill_increment_j": 1807.2496910408206,
+        "gpu_decode_increment_j": 1509.5773378655526,
+        "gpu_idle_baseline_j": 18000.0,
+        "total_j": 21317.067492617964
+      }
+    },
+    {
+      "seed": 30004,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.10043946942723792,
+        "downlink_j": 0.1577604368722907,
+        "gpu_prefill_increment_j": 1919.1560653553493,
+        "gpu_decode_increment_j": 1810.406233825494,
+        "gpu_idle_baseline_j": 18000.0,
+        "total_j": 21729.82049908714
+      }
+    }
+  ],
+  "comparisons": [
+    "actions",
+    "observations",
+    "masks",
+    "rewards",
+    "node_release_times",
+    "memory",
+    "request_outcomes",
+    "batch_outcomes",
+    "nonenergy_metrics"
+  ]
+}

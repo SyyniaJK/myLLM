@@ -1,0 +1,6 @@
+# Tested top-level versions; package managers resolve their declared dependencies.
+numpy==2.4.6
+torch==2.14.1
+gymnasium==1.4.0
+matplotlib==3.11.1
+pytest==8.4.2

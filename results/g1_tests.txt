@@ -1,0 +1,8 @@
+..........................................................               [100%]
+============================== warnings summary ===============================
+tests/test_environment.py::test_gymnasium_api_and_determinism
+  D:\OneDrive\X-File\U\U3S1\myLLM\EdgeInferenceLab\.venv\Lib\site-packages\gymnasium\utils\env_checker.py:376: UserWarning: [33mWARN: A Box observation space maximum value is infinity. This is probably too high.[0m
+    logger.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+58 passed, 1 warning in 8.37s

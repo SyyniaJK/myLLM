@@ -1,0 +1,77 @@
+[
+  {
+    "case": "default",
+    "training_seed": 1,
+    "steps": 65536
+  },
+  {
+    "case": "default",
+    "training_seed": 2,
+    "steps": 65536
+  },
+  {
+    "case": "default",
+    "training_seed": 3,
+    "steps": 65536
+  },
+  {
+    "case": "users_10",
+    "training_seed": 1,
+    "steps": 65536
+  },
+  {
+    "case": "users_10",
+    "training_seed": 2,
+    "steps": 65536
+  },
+  {
+    "case": "users_10",
+    "training_seed": 3,
+    "steps": 65536
+  },
+  {
+    "case": "users_30",
+    "training_seed": 1,
+    "steps": 65536
+  },
+  {
+    "case": "users_30",
+    "training_seed": 2,
+    "steps": 65536
+  },
+  {
+    "case": "users_30",
+    "training_seed": 3,
+    "steps": 65536
+  },
+  {
+    "case": "nodes_2",
+    "training_seed": 1,
+    "steps": 65536
+  },
+  {
+    "case": "nodes_2",
+    "training_seed": 2,
+    "steps": 65536
+  },
+  {
+    "case": "nodes_2",
+    "training_seed": 3,
+    "steps": 65536
+  },
+  {
+    "case": "nodes_6",
+    "training_seed": 1,
+    "steps": 65536
+  },
+  {
+    "case": "nodes_6",
+    "training_seed": 2,
+    "steps": 65536
+  },
+  {
+    "case": "nodes_6",
+    "training_seed": 3,
+    "steps": 65536
+  }
+]

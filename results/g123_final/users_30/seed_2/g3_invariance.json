@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "episodes": [
+    {
+      "seed": 30000,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.29328016508665056,
+        "downlink_j": 0.5270598806406768,
+        "gpu_prefill_increment_j": 3630.962681592435,
+        "gpu_decode_increment_j": 3669.455225466997,
+        "gpu_idle_baseline_j": 9000.0,
+        "total_j": 16301.238247105159
+      }
+    },
+    {
+      "seed": 30001,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.3255977085494257,
+        "downlink_j": 0.5955897382973119,
+        "gpu_prefill_increment_j": 3695.6181846103245,
+        "gpu_decode_increment_j": 3638.457113528907,
+        "gpu_idle_baseline_j": 9000.0,
+        "total_j": 16334.996485586078
+      }
+    },
+    {
+      "seed": 30002,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.32203913502631565,
+        "downlink_j": 0.5780230634808141,
+        "gpu_prefill_increment_j": 3760.670248857315,
+        "gpu_decode_increment_j": 3671.088124952411,
+        "gpu_idle_baseline_j": 9000.0,
+        "total_j": 16432.658436008234
+      }
+    },
+    {
+      "seed": 30003,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.3149627879719856,
+        "downlink_j": 0.5421894405313656,
+        "gpu_prefill_increment_j": 3589.5680983456245,
+        "gpu_decode_increment_j": 3459.0830010020018,
+        "gpu_idle_baseline_j": 9000.0,
+        "total_j": 16049.50825157613
+      }
+    },
+    {
+      "seed": 30004,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.35843088299326054,
+        "downlink_j": 1.1441859193105481,
+        "gpu_prefill_increment_j": 3774.774209338449,
+        "gpu_decode_increment_j": 3723.5407381677046,
+        "gpu_idle_baseline_j": 9000.0,
+        "total_j": 16499.817564308458
+      }
+    }
+  ],
+  "comparisons": [
+    "actions",
+    "observations",
+    "masks",
+    "rewards",
+    "node_release_times",
+    "memory",
+    "request_outcomes",
+    "batch_outcomes",
+    "nonenergy_metrics"
+  ]
+}

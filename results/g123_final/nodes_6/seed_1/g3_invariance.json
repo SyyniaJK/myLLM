@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "episodes": [
+    {
+      "seed": 30000,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.0820082602627974,
+        "downlink_j": 0.1313177529574181,
+        "gpu_prefill_increment_j": 1711.8386615889253,
+        "gpu_decode_increment_j": 1481.3464312480698,
+        "gpu_idle_baseline_j": 18000.0,
+        "total_j": 21193.398418850215
+      }
+    },
+    {
+      "seed": 30001,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.08210787999961844,
+        "downlink_j": 0.13685453287054372,
+        "gpu_prefill_increment_j": 1817.151704761176,
+        "gpu_decode_increment_j": 1649.4679885066348,
+        "gpu_idle_baseline_j": 18000.0,
+        "total_j": 21466.83865568068
+      }
+    },
+    {
+      "seed": 30002,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.08857519709940642,
+        "downlink_j": 0.1434263772441664,
+        "gpu_prefill_increment_j": 1773.1534366768847,
+        "gpu_decode_increment_j": 1575.645532889212,
+        "gpu_idle_baseline_j": 18000.0,
+        "total_j": 21349.03097114044
+      }
+    },
+    {
+      "seed": 30003,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.09437758810702945,
+        "downlink_j": 0.14938393894112778,
+        "gpu_prefill_increment_j": 1779.5625070460485,
+        "gpu_decode_increment_j": 1503.1168692347103,
+        "gpu_idle_baseline_j": 18000.0,
+        "total_j": 21282.923137807808
+      }
+    },
+    {
+      "seed": 30004,
+      "transitions": 200,
+      "exactly_equal": true,
+      "energy_window": {
+        "uplink_j": 0.0986264636674059,
+        "downlink_j": 0.1433428351671906,
+        "gpu_prefill_increment_j": 1871.1160772695018,
+        "gpu_decode_increment_j": 1687.0961971607426,
+        "gpu_idle_baseline_j": 18000.0,
+        "total_j": 21558.45424372908
+      }
+    }
+  ],
+  "comparisons": [
+    "actions",
+    "observations",
+    "masks",
+    "rewards",
+    "node_release_times",
+    "memory",
+    "request_outcomes",
+    "batch_outcomes",
+    "nonenergy_metrics"
+  ]
+}

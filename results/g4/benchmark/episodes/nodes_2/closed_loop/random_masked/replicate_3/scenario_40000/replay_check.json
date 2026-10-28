@@ -1,0 +1,9 @@
+{
+  "exact": true,
+  "actions": true,
+  "rewards": true,
+  "requests": true,
+  "batches": true,
+  "scientific_metrics": true,
+  "wall_clock_excluded": true
+}

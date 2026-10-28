@@ -1,0 +1,25 @@
+{
+  "evaluation_cells": 1800,
+  "complete_unique_grid": true,
+  "saved_scenarios": 50,
+  "saved_trajectories": 1800,
+  "automatic_exact_replays": 180,
+  "manual_exact_replay": true,
+  "new_training_runs": 15,
+  "training_steps_per_learned_run": 65536,
+  "regenerated_files_byte_identical": [
+    "summary.json",
+    "summary.csv",
+    "statistics.csv",
+    "paired_differences.json",
+    "paired_differences.csv",
+    "report.md"
+  ],
+  "tests_passed": 73,
+  "figure_visual_review": [
+    "performance",
+    "scaling",
+    "paired",
+    "learning_comparison"
+  ]
+}
