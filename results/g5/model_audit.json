@@ -1,0 +1,24 @@
+{
+  "calibration_status": "not_hardware_calibrated",
+  "cuda_available": false,
+  "phase_power_w": {
+    "source": "illustrative_phase_power_not_hardware_measurement",
+    "idle_w_per_gpu": 15.0,
+    "prefill_w_per_gpu": 60.0,
+    "decode_w_per_gpu": 45.0
+  },
+  "bits_per_token": 8.0,
+  "effective_tflops": 96.5,
+  "expected_default_fixed_j": 9000.0,
+  "g4_rows_checked": 1800,
+  "fixed_baseline_per_case": true,
+  "radio_noise_model": "total_noise_power_and_linear_bandwidth_fraction_paper_approximation",
+  "missing_calibration": [
+    "phase power traces",
+    "effective GPU throughput and memory bandwidth",
+    "wire payload and protocol overhead",
+    "channel/link measurements"
+  ],
+  "no_sleep_or_dvfs_control": true,
+  "same_batch_full_gpu_energy_depends_on_lengths_and_group_not_upload_start": true
+}

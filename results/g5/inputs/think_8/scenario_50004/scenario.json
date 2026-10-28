@@ -1,0 +1,3450 @@
+{
+  "format": 1,
+  "config": {
+    "name": "paper_aligned",
+    "users": 15,
+    "nodes": 3,
+    "gpus_per_node": 1,
+    "slots": 200,
+    "slot_s": 1.0,
+    "radius_m": 300.0,
+    "mean_think_s": 8.0,
+    "input_tokens": [
+      128,
+      256,
+      512
+    ],
+    "output_caps": [
+      128,
+      256,
+      512,
+      1024
+    ],
+    "output_fractions": [
+      0.5,
+      0.75,
+      1.0
+    ],
+    "slo_s": [
+      3.0,
+      5.0,
+      9.0
+    ],
+    "bits_per_token": 8.0,
+    "good_weight": 1.0,
+    "oom_weight": 0.5,
+    "model": {
+      "name": "Llama-7B",
+      "parameters": 7000000000,
+      "hidden": 4096,
+      "layers": 32,
+      "ffn_hidden": 11008
+    },
+    "device": {
+      "name": "paper_L2_analytical",
+      "memory_gb": 24.0,
+      "tflops": 96.5
+    },
+    "radio": {
+      "uplink_hz": 5000000.0,
+      "downlink_hz": 5000000.0,
+      "uplink_w": 1.0,
+      "downlink_per_link_w": 1.0,
+      "noise_up_w": 1e-14,
+      "noise_down_w": 2e-14,
+      "antenna_gain": 3.0,
+      "carrier_hz": 915000000.0,
+      "path_exponent": 3.0
+    },
+    "energy": {
+      "source": "illustrative_phase_power_not_hardware_measurement",
+      "idle_w_per_gpu": 15.0,
+      "prefill_w_per_gpu": 60.0,
+      "decode_w_per_gpu": 45.0
+    },
+    "ppo": {
+      "hidden": 128,
+      "rollout_steps": 256,
+      "minibatch": 128,
+      "epochs": 10,
+      "actor_lr": 0.0003,
+      "critic_lr": 0.0003,
+      "gamma": 0.99,
+      "gae_lambda": 0.95,
+      "clip": 0.2,
+      "entropy": 0.01,
+      "max_grad_norm": 0.5,
+      "reward_scaling": true
+    }
+  },
+  "seed": 50004,
+  "episode_seed": 346419824,
+  "offers": [
+    {
+      "user": 13,
+      "sequence": 0,
+      "arrival_s": 0.2527710961077718,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 8,
+      "sequence": 0,
+      "arrival_s": 0.5602334867105945,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 10,
+      "sequence": 0,
+      "arrival_s": 0.7570933632354387,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 3.0
+    },
+    {
+      "user": 7,
+      "sequence": 0,
+      "arrival_s": 0.9212365858679832,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 3.0
+    },
+    {
+      "user": 13,
+      "sequence": 1,
+      "arrival_s": 1.2853662375933625,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 8,
+      "sequence": 1,
+      "arrival_s": 1.34427429651028,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 4,
+      "sequence": 0,
+      "arrival_s": 1.382198810545367,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 5.0
+    },
+    {
+      "user": 11,
+      "sequence": 0,
+      "arrival_s": 1.5649892903658238,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 12,
+      "sequence": 0,
+      "arrival_s": 1.656969865806224,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 5,
+      "sequence": 0,
+      "arrival_s": 1.6898695590755959,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 1,
+      "sequence": 0,
+      "arrival_s": 2.0807664083932584,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 10,
+      "sequence": 1,
+      "arrival_s": 2.10053561019657,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 9.0
+    },
+    {
+      "user": 9,
+      "sequence": 0,
+      "arrival_s": 2.5564031168778762,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 3,
+      "sequence": 0,
+      "arrival_s": 3.1796497250691225,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 9.0
+    },
+    {
+      "user": 13,
+      "sequence": 2,
+      "arrival_s": 3.4842504989040273,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 3.0
+    },
+    {
+      "user": 1,
+      "sequence": 1,
+      "arrival_s": 4.052124702894431,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 2,
+      "sequence": 0,
+      "arrival_s": 5.033942628408552,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 14,
+      "sequence": 0,
+      "arrival_s": 7.000249649933055,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 8,
+      "sequence": 2,
+      "arrival_s": 7.068325229495661,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 7,
+      "sequence": 1,
+      "arrival_s": 7.8240391383487,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 9.0
+    },
+    {
+      "user": 11,
+      "sequence": 1,
+      "arrival_s": 8.655461178345748,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 3.0
+    },
+    {
+      "user": 5,
+      "sequence": 1,
+      "arrival_s": 8.713809138783045,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 3,
+      "sequence": 1,
+      "arrival_s": 8.87912511410768,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 9.0
+    },
+    {
+      "user": 4,
+      "sequence": 1,
+      "arrival_s": 9.383993869406423,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 0,
+      "sequence": 0,
+      "arrival_s": 9.485645722794946,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 5.0
+    },
+    {
+      "user": 0,
+      "sequence": 1,
+      "arrival_s": 10.18514675086209,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 3.0
+    },
+    {
+      "user": 11,
+      "sequence": 2,
+      "arrival_s": 11.338455008994984,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 9.0
+    },
+    {
+      "user": 10,
+      "sequence": 2,
+      "arrival_s": 11.490309204070613,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 4,
+      "sequence": 2,
+      "arrival_s": 12.64671472166444,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 5.0
+    },
+    {
+      "user": 7,
+      "sequence": 2,
+      "arrival_s": 12.798020408910753,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 11,
+      "sequence": 3,
+      "arrival_s": 13.236257734042203,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 3.0
+    },
+    {
+      "user": 9,
+      "sequence": 1,
+      "arrival_s": 13.307642029438151,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 1,
+      "sequence": 2,
+      "arrival_s": 14.289571741272546,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 0,
+      "sequence": 2,
+      "arrival_s": 14.7994197107128,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 12,
+      "sequence": 1,
+      "arrival_s": 14.870195594876922,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 0,
+      "sequence": 3,
+      "arrival_s": 15.099079637701202,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 3.0
+    },
+    {
+      "user": 10,
+      "sequence": 3,
+      "arrival_s": 15.713200726256527,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 12,
+      "sequence": 2,
+      "arrival_s": 17.30314358495907,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 5.0
+    },
+    {
+      "user": 11,
+      "sequence": 4,
+      "arrival_s": 18.51733269356579,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 12,
+      "sequence": 3,
+      "arrival_s": 19.234113878065088,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 9.0
+    },
+    {
+      "user": 1,
+      "sequence": 3,
+      "arrival_s": 19.512806364661277,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 5.0
+    },
+    {
+      "user": 13,
+      "sequence": 3,
+      "arrival_s": 19.703612693133746,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 9.0
+    },
+    {
+      "user": 4,
+      "sequence": 3,
+      "arrival_s": 20.780438997202673,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 3.0
+    },
+    {
+      "user": 1,
+      "sequence": 4,
+      "arrival_s": 21.09018356321561,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 3.0
+    },
+    {
+      "user": 12,
+      "sequence": 4,
+      "arrival_s": 21.881506684791393,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 12,
+      "sequence": 5,
+      "arrival_s": 23.47637768029468,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 13,
+      "sequence": 4,
+      "arrival_s": 23.558996123860172,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 3.0
+    },
+    {
+      "user": 8,
+      "sequence": 3,
+      "arrival_s": 23.82689364789111,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 1,
+      "sequence": 5,
+      "arrival_s": 24.189283684925112,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 9.0
+    },
+    {
+      "user": 3,
+      "sequence": 2,
+      "arrival_s": 24.606265066216068,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 0,
+      "sequence": 4,
+      "arrival_s": 24.957491205602267,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 11,
+      "sequence": 5,
+      "arrival_s": 25.274545969515522,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 3.0
+    },
+    {
+      "user": 5,
+      "sequence": 2,
+      "arrival_s": 25.588335889400966,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 9.0
+    },
+    {
+      "user": 13,
+      "sequence": 5,
+      "arrival_s": 26.117600902130786,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 5.0
+    },
+    {
+      "user": 4,
+      "sequence": 4,
+      "arrival_s": 26.256964813398945,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 3.0
+    },
+    {
+      "user": 3,
+      "sequence": 3,
+      "arrival_s": 27.14957574068567,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 4,
+      "sequence": 5,
+      "arrival_s": 27.54904278816973,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 3.0
+    },
+    {
+      "user": 10,
+      "sequence": 4,
+      "arrival_s": 28.089120585932534,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 5.0
+    },
+    {
+      "user": 7,
+      "sequence": 3,
+      "arrival_s": 28.942601898280245,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 3.0
+    },
+    {
+      "user": 8,
+      "sequence": 4,
+      "arrival_s": 29.313856381427318,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 2,
+      "sequence": 1,
+      "arrival_s": 29.331296722220106,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 11,
+      "sequence": 6,
+      "arrival_s": 29.343675006776614,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 4,
+      "sequence": 6,
+      "arrival_s": 30.592427174483564,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 5,
+      "sequence": 3,
+      "arrival_s": 30.722104375892307,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 12,
+      "sequence": 6,
+      "arrival_s": 33.17865095975493,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 5,
+      "sequence": 4,
+      "arrival_s": 34.411285038365044,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 3.0
+    },
+    {
+      "user": 8,
+      "sequence": 5,
+      "arrival_s": 34.542451850739624,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 9.0
+    },
+    {
+      "user": 2,
+      "sequence": 2,
+      "arrival_s": 34.64070735857111,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 3.0
+    },
+    {
+      "user": 3,
+      "sequence": 4,
+      "arrival_s": 35.212521332554665,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 11,
+      "sequence": 7,
+      "arrival_s": 35.622157797295124,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 2,
+      "sequence": 3,
+      "arrival_s": 35.81306322979182,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 10,
+      "sequence": 5,
+      "arrival_s": 35.86763570209568,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 13,
+      "sequence": 6,
+      "arrival_s": 36.004971129265336,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 5.0
+    },
+    {
+      "user": 10,
+      "sequence": 6,
+      "arrival_s": 36.17540190086685,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 3,
+      "sequence": 5,
+      "arrival_s": 36.9016565448383,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 5,
+      "sequence": 5,
+      "arrival_s": 37.03738184668941,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 13,
+      "sequence": 7,
+      "arrival_s": 37.521333704540986,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 9.0
+    },
+    {
+      "user": 8,
+      "sequence": 6,
+      "arrival_s": 37.89141980110011,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 3.0
+    },
+    {
+      "user": 8,
+      "sequence": 7,
+      "arrival_s": 38.78499574980468,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 5,
+      "sequence": 6,
+      "arrival_s": 39.53082788892206,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 5.0
+    },
+    {
+      "user": 8,
+      "sequence": 8,
+      "arrival_s": 40.69566518208142,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 1,
+      "sequence": 6,
+      "arrival_s": 41.19216507953429,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 3.0
+    },
+    {
+      "user": 12,
+      "sequence": 7,
+      "arrival_s": 41.326526697146605,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 5.0
+    },
+    {
+      "user": 5,
+      "sequence": 7,
+      "arrival_s": 43.32889829543002,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 9.0
+    },
+    {
+      "user": 10,
+      "sequence": 7,
+      "arrival_s": 43.45722421688349,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 3.0
+    },
+    {
+      "user": 7,
+      "sequence": 4,
+      "arrival_s": 43.61163462345479,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 11,
+      "sequence": 8,
+      "arrival_s": 43.84508321782597,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 9.0
+    },
+    {
+      "user": 9,
+      "sequence": 2,
+      "arrival_s": 44.21048169165733,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 9.0
+    },
+    {
+      "user": 6,
+      "sequence": 0,
+      "arrival_s": 44.36987426302623,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 13,
+      "sequence": 8,
+      "arrival_s": 44.702684525306076,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 5.0
+    },
+    {
+      "user": 5,
+      "sequence": 8,
+      "arrival_s": 44.96233422880616,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 14,
+      "sequence": 1,
+      "arrival_s": 45.94271743297251,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 9.0
+    },
+    {
+      "user": 4,
+      "sequence": 7,
+      "arrival_s": 46.75060760201684,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 6,
+      "sequence": 1,
+      "arrival_s": 46.95938299171321,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 6,
+      "sequence": 2,
+      "arrival_s": 50.06522232506138,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 3,
+      "sequence": 6,
+      "arrival_s": 51.27897904000885,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 3.0
+    },
+    {
+      "user": 12,
+      "sequence": 8,
+      "arrival_s": 52.8097714886428,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 9,
+      "sequence": 3,
+      "arrival_s": 52.88072788922815,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 10,
+      "sequence": 8,
+      "arrival_s": 53.102396513125086,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 3.0
+    },
+    {
+      "user": 12,
+      "sequence": 9,
+      "arrival_s": 53.67203398429645,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 3.0
+    },
+    {
+      "user": 11,
+      "sequence": 9,
+      "arrival_s": 54.10747553927061,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 3.0
+    },
+    {
+      "user": 9,
+      "sequence": 4,
+      "arrival_s": 54.15191200388442,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 9,
+      "sequence": 5,
+      "arrival_s": 55.60341492512911,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 3.0
+    },
+    {
+      "user": 14,
+      "sequence": 2,
+      "arrival_s": 57.04669733680403,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 12,
+      "sequence": 10,
+      "arrival_s": 57.359139866807645,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 3.0
+    },
+    {
+      "user": 13,
+      "sequence": 9,
+      "arrival_s": 58.19102392399017,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 11,
+      "sequence": 10,
+      "arrival_s": 58.92753198421255,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 5.0
+    },
+    {
+      "user": 9,
+      "sequence": 6,
+      "arrival_s": 58.93746748428488,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 9,
+      "sequence": 7,
+      "arrival_s": 59.889682592240334,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 10,
+      "sequence": 9,
+      "arrival_s": 60.72211560613892,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 0,
+      "sequence": 5,
+      "arrival_s": 60.85844231899682,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 8,
+      "sequence": 9,
+      "arrival_s": 61.399112617058286,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 3,
+      "sequence": 7,
+      "arrival_s": 61.47254848341956,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 9.0
+    },
+    {
+      "user": 14,
+      "sequence": 3,
+      "arrival_s": 61.92717679230729,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 9,
+      "sequence": 8,
+      "arrival_s": 62.014760854329374,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 6,
+      "sequence": 3,
+      "arrival_s": 62.020321535695665,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 5.0
+    },
+    {
+      "user": 3,
+      "sequence": 8,
+      "arrival_s": 63.04553966441103,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 9.0
+    },
+    {
+      "user": 2,
+      "sequence": 4,
+      "arrival_s": 63.34119462697177,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 9.0
+    },
+    {
+      "user": 6,
+      "sequence": 4,
+      "arrival_s": 63.99958749961678,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 3.0
+    },
+    {
+      "user": 6,
+      "sequence": 5,
+      "arrival_s": 64.28596332828485,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 1,
+      "sequence": 7,
+      "arrival_s": 64.58572989613609,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 3.0
+    },
+    {
+      "user": 9,
+      "sequence": 9,
+      "arrival_s": 64.7327901783191,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 13,
+      "sequence": 10,
+      "arrival_s": 64.84443845730857,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 12,
+      "sequence": 11,
+      "arrival_s": 65.08259427934267,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 5.0
+    },
+    {
+      "user": 6,
+      "sequence": 6,
+      "arrival_s": 65.97935903295028,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 5.0
+    },
+    {
+      "user": 14,
+      "sequence": 4,
+      "arrival_s": 66.01250156404629,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 0,
+      "sequence": 6,
+      "arrival_s": 66.30911500945678,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 5,
+      "sequence": 9,
+      "arrival_s": 66.66473095980581,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 10,
+      "sequence": 10,
+      "arrival_s": 67.17784836019891,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 9,
+      "sequence": 10,
+      "arrival_s": 67.29125199264668,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 5.0
+    },
+    {
+      "user": 8,
+      "sequence": 10,
+      "arrival_s": 67.29387152216809,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 7,
+      "sequence": 5,
+      "arrival_s": 67.90058151657841,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 4,
+      "sequence": 8,
+      "arrival_s": 67.9992837975393,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 5.0
+    },
+    {
+      "user": 10,
+      "sequence": 11,
+      "arrival_s": 68.7831762171793,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 8,
+      "sequence": 11,
+      "arrival_s": 69.42332524305185,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 5.0
+    },
+    {
+      "user": 10,
+      "sequence": 12,
+      "arrival_s": 69.47004097849188,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 1,
+      "sequence": 8,
+      "arrival_s": 70.07918016799701,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 5.0
+    },
+    {
+      "user": 14,
+      "sequence": 5,
+      "arrival_s": 71.08219135528611,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 3,
+      "sequence": 9,
+      "arrival_s": 71.10635081872216,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 10,
+      "sequence": 13,
+      "arrival_s": 71.44787066067127,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 9.0
+    },
+    {
+      "user": 3,
+      "sequence": 10,
+      "arrival_s": 72.32519715121016,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 11,
+      "sequence": 11,
+      "arrival_s": 72.44207790988548,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 9,
+      "sequence": 11,
+      "arrival_s": 72.48079417015309,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 4,
+      "sequence": 9,
+      "arrival_s": 73.69829149756065,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 0,
+      "sequence": 7,
+      "arrival_s": 73.97891457676334,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 14,
+      "sequence": 6,
+      "arrival_s": 74.24783157824918,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 3.0
+    },
+    {
+      "user": 3,
+      "sequence": 11,
+      "arrival_s": 74.48547309626191,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 3.0
+    },
+    {
+      "user": 0,
+      "sequence": 8,
+      "arrival_s": 75.65640898814034,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 0,
+      "sequence": 9,
+      "arrival_s": 76.02114262978694,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 13,
+      "sequence": 11,
+      "arrival_s": 76.09797345242801,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 9,
+      "sequence": 12,
+      "arrival_s": 77.62607463525164,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 12,
+      "sequence": 12,
+      "arrival_s": 77.75144648297481,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 3.0
+    },
+    {
+      "user": 7,
+      "sequence": 6,
+      "arrival_s": 79.11853222550744,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 12,
+      "sequence": 13,
+      "arrival_s": 79.42371702593934,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 9,
+      "sequence": 13,
+      "arrival_s": 79.72837384927792,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 5.0
+    },
+    {
+      "user": 0,
+      "sequence": 10,
+      "arrival_s": 79.90422127480346,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 7,
+      "sequence": 7,
+      "arrival_s": 80.39571264104757,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 3.0
+    },
+    {
+      "user": 6,
+      "sequence": 7,
+      "arrival_s": 81.34205831563595,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 6,
+      "sequence": 8,
+      "arrival_s": 82.29828690177058,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 5.0
+    },
+    {
+      "user": 5,
+      "sequence": 10,
+      "arrival_s": 82.37530268563104,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 3.0
+    },
+    {
+      "user": 14,
+      "sequence": 7,
+      "arrival_s": 82.45348923154721,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 3.0
+    },
+    {
+      "user": 12,
+      "sequence": 14,
+      "arrival_s": 82.74167105075563,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 5.0
+    },
+    {
+      "user": 1,
+      "sequence": 9,
+      "arrival_s": 83.02984719912823,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 3.0
+    },
+    {
+      "user": 12,
+      "sequence": 15,
+      "arrival_s": 83.76672593154261,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 9,
+      "sequence": 14,
+      "arrival_s": 86.56300133894518,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 12,
+      "sequence": 16,
+      "arrival_s": 86.58331616187441,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 9.0
+    },
+    {
+      "user": 7,
+      "sequence": 8,
+      "arrival_s": 87.58991366007878,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 8,
+      "sequence": 12,
+      "arrival_s": 88.06339958345772,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 9.0
+    },
+    {
+      "user": 5,
+      "sequence": 11,
+      "arrival_s": 88.20474845003346,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 4,
+      "sequence": 10,
+      "arrival_s": 88.30867349000823,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 9.0
+    },
+    {
+      "user": 10,
+      "sequence": 14,
+      "arrival_s": 88.99658474962315,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 5,
+      "sequence": 12,
+      "arrival_s": 91.2940484757229,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 3.0
+    },
+    {
+      "user": 10,
+      "sequence": 15,
+      "arrival_s": 91.49665786951643,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 3.0
+    },
+    {
+      "user": 14,
+      "sequence": 8,
+      "arrival_s": 91.52421802272295,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 9.0
+    },
+    {
+      "user": 1,
+      "sequence": 10,
+      "arrival_s": 92.54179718647272,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 4,
+      "sequence": 11,
+      "arrival_s": 94.70354723638891,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 13,
+      "sequence": 12,
+      "arrival_s": 95.18286728861574,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 9.0
+    },
+    {
+      "user": 4,
+      "sequence": 12,
+      "arrival_s": 95.2580076703628,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 7,
+      "sequence": 9,
+      "arrival_s": 95.34806229828797,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 0,
+      "sequence": 11,
+      "arrival_s": 95.72659784665913,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 3,
+      "sequence": 12,
+      "arrival_s": 96.04296728551509,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 7,
+      "sequence": 10,
+      "arrival_s": 97.35521791370095,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 1,
+      "sequence": 11,
+      "arrival_s": 98.118677440261,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 5.0
+    },
+    {
+      "user": 3,
+      "sequence": 13,
+      "arrival_s": 98.23946660731364,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 5.0
+    },
+    {
+      "user": 9,
+      "sequence": 15,
+      "arrival_s": 100.23874936259516,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 13,
+      "sequence": 13,
+      "arrival_s": 100.75784453891093,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 4,
+      "sequence": 13,
+      "arrival_s": 102.45207277666928,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 3,
+      "sequence": 14,
+      "arrival_s": 102.69575374505719,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 9.0
+    },
+    {
+      "user": 14,
+      "sequence": 9,
+      "arrival_s": 104.87671658354888,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 3.0
+    },
+    {
+      "user": 10,
+      "sequence": 16,
+      "arrival_s": 105.631389366215,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 1,
+      "sequence": 12,
+      "arrival_s": 106.1554480327581,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 3.0
+    },
+    {
+      "user": 13,
+      "sequence": 14,
+      "arrival_s": 108.20977041035418,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 5.0
+    },
+    {
+      "user": 3,
+      "sequence": 15,
+      "arrival_s": 109.09771930455119,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 0,
+      "sequence": 12,
+      "arrival_s": 110.05163496753009,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 9.0
+    },
+    {
+      "user": 2,
+      "sequence": 5,
+      "arrival_s": 111.42137121990513,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 9.0
+    },
+    {
+      "user": 4,
+      "sequence": 14,
+      "arrival_s": 111.77450545926541,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 9.0
+    },
+    {
+      "user": 2,
+      "sequence": 6,
+      "arrival_s": 112.46470002739198,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 6,
+      "sequence": 9,
+      "arrival_s": 113.23195117695983,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 13,
+      "sequence": 15,
+      "arrival_s": 113.31247954441235,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 8,
+      "sequence": 13,
+      "arrival_s": 114.28107761353247,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 12,
+      "sequence": 17,
+      "arrival_s": 114.64067543732162,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 10,
+      "sequence": 17,
+      "arrival_s": 115.05571456760477,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 9.0
+    },
+    {
+      "user": 2,
+      "sequence": 7,
+      "arrival_s": 115.46214680157149,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 13,
+      "sequence": 16,
+      "arrival_s": 115.81847481134338,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 5.0
+    },
+    {
+      "user": 9,
+      "sequence": 16,
+      "arrival_s": 117.32240601195036,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 12,
+      "sequence": 18,
+      "arrival_s": 117.33059735040396,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 5.0
+    },
+    {
+      "user": 6,
+      "sequence": 10,
+      "arrival_s": 117.51107629451863,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 3.0
+    },
+    {
+      "user": 9,
+      "sequence": 17,
+      "arrival_s": 120.1699376307108,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 11,
+      "sequence": 12,
+      "arrival_s": 121.18355385731667,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 3.0
+    },
+    {
+      "user": 9,
+      "sequence": 18,
+      "arrival_s": 121.39571863686425,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 14,
+      "sequence": 10,
+      "arrival_s": 122.36701450588993,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 3.0
+    },
+    {
+      "user": 0,
+      "sequence": 13,
+      "arrival_s": 122.76632242789626,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 2,
+      "sequence": 8,
+      "arrival_s": 122.94801341067017,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 9.0
+    },
+    {
+      "user": 12,
+      "sequence": 19,
+      "arrival_s": 123.85036874164075,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 3.0
+    },
+    {
+      "user": 14,
+      "sequence": 11,
+      "arrival_s": 124.58191611131019,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 9.0
+    },
+    {
+      "user": 11,
+      "sequence": 13,
+      "arrival_s": 124.92918264517284,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 12,
+      "sequence": 20,
+      "arrival_s": 124.9737010610617,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 3.0
+    },
+    {
+      "user": 7,
+      "sequence": 11,
+      "arrival_s": 125.05029853003839,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 3.0
+    },
+    {
+      "user": 9,
+      "sequence": 19,
+      "arrival_s": 125.28657037881706,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 9.0
+    },
+    {
+      "user": 2,
+      "sequence": 9,
+      "arrival_s": 125.28796554045934,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 9.0
+    },
+    {
+      "user": 6,
+      "sequence": 11,
+      "arrival_s": 125.77326849959674,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 3,
+      "sequence": 16,
+      "arrival_s": 126.16703295072374,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 9.0
+    },
+    {
+      "user": 13,
+      "sequence": 17,
+      "arrival_s": 126.23267118376071,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 0,
+      "sequence": 14,
+      "arrival_s": 126.41687000402884,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 9.0
+    },
+    {
+      "user": 7,
+      "sequence": 12,
+      "arrival_s": 126.4832554061736,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 1,
+      "sequence": 13,
+      "arrival_s": 126.5333635848066,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 5.0
+    },
+    {
+      "user": 7,
+      "sequence": 13,
+      "arrival_s": 127.01616857393726,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 3.0
+    },
+    {
+      "user": 9,
+      "sequence": 20,
+      "arrival_s": 127.3433303518505,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 3.0
+    },
+    {
+      "user": 5,
+      "sequence": 13,
+      "arrival_s": 128.16942870833816,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 3,
+      "sequence": 17,
+      "arrival_s": 129.03631570641963,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 2,
+      "sequence": 10,
+      "arrival_s": 129.2136767906334,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 3.0
+    },
+    {
+      "user": 8,
+      "sequence": 14,
+      "arrival_s": 129.6101767873345,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 11,
+      "sequence": 14,
+      "arrival_s": 129.82722453398836,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 7,
+      "sequence": 14,
+      "arrival_s": 130.03736621014713,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 2,
+      "sequence": 11,
+      "arrival_s": 130.40088332564835,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 8,
+      "sequence": 15,
+      "arrival_s": 130.44469301137062,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 9.0
+    },
+    {
+      "user": 3,
+      "sequence": 18,
+      "arrival_s": 130.75878174866105,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 2,
+      "sequence": 12,
+      "arrival_s": 131.78579493647948,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 9,
+      "sequence": 21,
+      "arrival_s": 131.9178906982312,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 5.0
+    },
+    {
+      "user": 14,
+      "sequence": 12,
+      "arrival_s": 132.31601792488408,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 7,
+      "sequence": 15,
+      "arrival_s": 132.62586809698462,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 8,
+      "sequence": 16,
+      "arrival_s": 133.27421250675582,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 14,
+      "sequence": 13,
+      "arrival_s": 133.61876990016114,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 9.0
+    },
+    {
+      "user": 7,
+      "sequence": 16,
+      "arrival_s": 133.6813743192735,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 5.0
+    },
+    {
+      "user": 2,
+      "sequence": 13,
+      "arrival_s": 133.73866246248235,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 3,
+      "sequence": 19,
+      "arrival_s": 134.01832082868194,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 3.0
+    },
+    {
+      "user": 7,
+      "sequence": 17,
+      "arrival_s": 134.04924319742477,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 9.0
+    },
+    {
+      "user": 11,
+      "sequence": 15,
+      "arrival_s": 134.44347704157795,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 6,
+      "sequence": 12,
+      "arrival_s": 135.34871475335015,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 12,
+      "sequence": 21,
+      "arrival_s": 135.52867307601701,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 0,
+      "sequence": 15,
+      "arrival_s": 136.06657902205987,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 5.0
+    },
+    {
+      "user": 11,
+      "sequence": 16,
+      "arrival_s": 136.5452563776616,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 3.0
+    },
+    {
+      "user": 2,
+      "sequence": 14,
+      "arrival_s": 137.4855407863062,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 5.0
+    },
+    {
+      "user": 1,
+      "sequence": 14,
+      "arrival_s": 137.54704526571325,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 3.0
+    },
+    {
+      "user": 7,
+      "sequence": 18,
+      "arrival_s": 137.61105842096393,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 6,
+      "sequence": 13,
+      "arrival_s": 137.72298969533315,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 1,
+      "sequence": 15,
+      "arrival_s": 138.00433632079216,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 12,
+      "sequence": 22,
+      "arrival_s": 138.10218584382093,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 13,
+      "sequence": 18,
+      "arrival_s": 138.6619566687685,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 5.0
+    },
+    {
+      "user": 5,
+      "sequence": 14,
+      "arrival_s": 140.22334614308082,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 7,
+      "sequence": 19,
+      "arrival_s": 140.72490796780858,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 14,
+      "sequence": 14,
+      "arrival_s": 141.08435156972382,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 3,
+      "sequence": 20,
+      "arrival_s": 141.79766529252728,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 5.0
+    },
+    {
+      "user": 0,
+      "sequence": 16,
+      "arrival_s": 142.17786887531093,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 9.0
+    },
+    {
+      "user": 14,
+      "sequence": 15,
+      "arrival_s": 142.53762712129546,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 2,
+      "sequence": 15,
+      "arrival_s": 142.6467361136093,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 3.0
+    },
+    {
+      "user": 7,
+      "sequence": 20,
+      "arrival_s": 143.702838909151,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 3.0
+    },
+    {
+      "user": 3,
+      "sequence": 21,
+      "arrival_s": 143.84974106037538,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 3.0
+    },
+    {
+      "user": 4,
+      "sequence": 15,
+      "arrival_s": 144.30177014916302,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 11,
+      "sequence": 17,
+      "arrival_s": 144.79548539405346,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 2,
+      "sequence": 16,
+      "arrival_s": 145.1128017880495,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 3.0
+    },
+    {
+      "user": 0,
+      "sequence": 17,
+      "arrival_s": 145.63852189369055,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 13,
+      "sequence": 19,
+      "arrival_s": 145.99754717660028,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 3.0
+    },
+    {
+      "user": 0,
+      "sequence": 18,
+      "arrival_s": 146.21633438359186,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 3.0
+    },
+    {
+      "user": 14,
+      "sequence": 16,
+      "arrival_s": 146.36860283235035,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 3,
+      "sequence": 22,
+      "arrival_s": 146.6818972454671,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 8,
+      "sequence": 17,
+      "arrival_s": 147.07750222669827,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 14,
+      "sequence": 17,
+      "arrival_s": 147.14703601418114,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 9.0
+    },
+    {
+      "user": 13,
+      "sequence": 20,
+      "arrival_s": 147.85722070649447,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 5,
+      "sequence": 15,
+      "arrival_s": 148.53292612400705,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 9.0
+    },
+    {
+      "user": 12,
+      "sequence": 23,
+      "arrival_s": 148.58790058200344,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 0,
+      "sequence": 19,
+      "arrival_s": 148.94220067256506,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 3,
+      "sequence": 23,
+      "arrival_s": 149.03968046536582,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 9,
+      "sequence": 22,
+      "arrival_s": 149.1101109762995,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 3.0
+    },
+    {
+      "user": 2,
+      "sequence": 17,
+      "arrival_s": 149.98426195047526,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 3.0
+    },
+    {
+      "user": 9,
+      "sequence": 23,
+      "arrival_s": 150.37905092641262,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 3.0
+    },
+    {
+      "user": 14,
+      "sequence": 18,
+      "arrival_s": 151.58360483112176,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 13,
+      "sequence": 21,
+      "arrival_s": 152.03677890233487,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 9.0
+    },
+    {
+      "user": 4,
+      "sequence": 16,
+      "arrival_s": 152.15493680243887,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 7,
+      "sequence": 21,
+      "arrival_s": 153.93251417879404,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 8,
+      "sequence": 18,
+      "arrival_s": 154.37377166280004,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 3,
+      "sequence": 24,
+      "arrival_s": 155.4541783235655,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 5.0
+    },
+    {
+      "user": 9,
+      "sequence": 24,
+      "arrival_s": 156.606718867967,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 7,
+      "sequence": 22,
+      "arrival_s": 157.3584655061192,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 9.0
+    },
+    {
+      "user": 4,
+      "sequence": 17,
+      "arrival_s": 158.04487873771635,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 6,
+      "sequence": 14,
+      "arrival_s": 158.25366943966776,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 5.0
+    },
+    {
+      "user": 8,
+      "sequence": 19,
+      "arrival_s": 158.37253019647613,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 12,
+      "sequence": 24,
+      "arrival_s": 158.3875653119617,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 9.0
+    },
+    {
+      "user": 11,
+      "sequence": 18,
+      "arrival_s": 158.39108911879012,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 3.0
+    },
+    {
+      "user": 8,
+      "sequence": 20,
+      "arrival_s": 159.30266610250916,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 14,
+      "sequence": 19,
+      "arrival_s": 159.9590098021222,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 5.0
+    },
+    {
+      "user": 1,
+      "sequence": 16,
+      "arrival_s": 160.19178919586358,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 4,
+      "sequence": 18,
+      "arrival_s": 160.2578410464476,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 6,
+      "sequence": 15,
+      "arrival_s": 160.7675323418633,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 7,
+      "sequence": 23,
+      "arrival_s": 161.06342084726234,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 14,
+      "sequence": 20,
+      "arrival_s": 161.588620303349,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 11,
+      "sequence": 19,
+      "arrival_s": 163.57066229813015,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 9.0
+    },
+    {
+      "user": 6,
+      "sequence": 16,
+      "arrival_s": 164.31834174895587,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 5.0
+    },
+    {
+      "user": 2,
+      "sequence": 18,
+      "arrival_s": 164.47046745121256,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 5,
+      "sequence": 16,
+      "arrival_s": 164.94229706634812,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 5.0
+    },
+    {
+      "user": 14,
+      "sequence": 21,
+      "arrival_s": 166.19206594829146,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 3.0
+    },
+    {
+      "user": 12,
+      "sequence": 25,
+      "arrival_s": 166.1962675713362,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 3.0
+    },
+    {
+      "user": 14,
+      "sequence": 22,
+      "arrival_s": 167.06412837358533,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 5.0
+    },
+    {
+      "user": 4,
+      "sequence": 19,
+      "arrival_s": 167.2952994282987,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 3.0
+    },
+    {
+      "user": 9,
+      "sequence": 25,
+      "arrival_s": 167.412788341917,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 5.0
+    },
+    {
+      "user": 8,
+      "sequence": 21,
+      "arrival_s": 168.17046180538784,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 9,
+      "sequence": 26,
+      "arrival_s": 168.78622148522396,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 11,
+      "sequence": 20,
+      "arrival_s": 169.095710566362,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 10,
+      "sequence": 18,
+      "arrival_s": 170.59634114313718,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 8,
+      "sequence": 22,
+      "arrival_s": 172.37762739152248,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 3.0
+    },
+    {
+      "user": 14,
+      "sequence": 23,
+      "arrival_s": 173.55827156156337,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 5.0
+    },
+    {
+      "user": 2,
+      "sequence": 19,
+      "arrival_s": 173.79511725787393,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 3.0
+    },
+    {
+      "user": 6,
+      "sequence": 17,
+      "arrival_s": 174.64479266726497,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 7,
+      "sequence": 24,
+      "arrival_s": 174.82873304273852,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 3.0
+    },
+    {
+      "user": 12,
+      "sequence": 26,
+      "arrival_s": 175.48268090874467,
+      "input_tokens": 128,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 3.0
+    },
+    {
+      "user": 8,
+      "sequence": 23,
+      "arrival_s": 175.6545601244845,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 3.0
+    },
+    {
+      "user": 3,
+      "sequence": 25,
+      "arrival_s": 175.6970581569358,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 13,
+      "sequence": 22,
+      "arrival_s": 175.71031137306986,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 9,
+      "sequence": 27,
+      "arrival_s": 176.64929785488908,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 5.0
+    },
+    {
+      "user": 3,
+      "sequence": 26,
+      "arrival_s": 176.97471632583841,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 3.0
+    },
+    {
+      "user": 12,
+      "sequence": 27,
+      "arrival_s": 177.51864403944248,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 0,
+      "sequence": 20,
+      "arrival_s": 178.1651456906792,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 7,
+      "sequence": 25,
+      "arrival_s": 178.34358045344132,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 3,
+      "sequence": 27,
+      "arrival_s": 178.57581594985518,
+      "input_tokens": 128,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 3.0
+    },
+    {
+      "user": 10,
+      "sequence": 19,
+      "arrival_s": 179.24363795533006,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 9.0
+    },
+    {
+      "user": 6,
+      "sequence": 18,
+      "arrival_s": 179.4266795210871,
+      "input_tokens": 128,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 3.0
+    },
+    {
+      "user": 14,
+      "sequence": 24,
+      "arrival_s": 179.98666041422632,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 0,
+      "sequence": 21,
+      "arrival_s": 180.49704742272056,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 5.0
+    },
+    {
+      "user": 8,
+      "sequence": 24,
+      "arrival_s": 180.95356731315746,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 9,
+      "sequence": 28,
+      "arrival_s": 181.28690264261027,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 3.0
+    },
+    {
+      "user": 14,
+      "sequence": 25,
+      "arrival_s": 181.68483508320676,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 9.0
+    },
+    {
+      "user": 4,
+      "sequence": 20,
+      "arrival_s": 182.87084060010463,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 3.0
+    },
+    {
+      "user": 7,
+      "sequence": 26,
+      "arrival_s": 182.87173581249735,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 5.0
+    },
+    {
+      "user": 13,
+      "sequence": 23,
+      "arrival_s": 183.08293822799544,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 3,
+      "sequence": 28,
+      "arrival_s": 183.2233833393291,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 9.0
+    },
+    {
+      "user": 2,
+      "sequence": 20,
+      "arrival_s": 184.1465797665455,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 9.0
+    },
+    {
+      "user": 12,
+      "sequence": 28,
+      "arrival_s": 184.6304717689233,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 9.0
+    },
+    {
+      "user": 12,
+      "sequence": 29,
+      "arrival_s": 185.1311212102411,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 9,
+      "sequence": 29,
+      "arrival_s": 186.08088211420943,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 9.0
+    },
+    {
+      "user": 8,
+      "sequence": 25,
+      "arrival_s": 186.4000495929705,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 0,
+      "sequence": 22,
+      "arrival_s": 186.73880455231253,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 9.0
+    },
+    {
+      "user": 1,
+      "sequence": 17,
+      "arrival_s": 186.87432061147354,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 5.0
+    },
+    {
+      "user": 12,
+      "sequence": 30,
+      "arrival_s": 187.93173091136052,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 4,
+      "sequence": 21,
+      "arrival_s": 188.5821411803667,
+      "input_tokens": 512,
+      "output_cap": 256,
+      "output_tokens": 192,
+      "slo_s": 9.0
+    },
+    {
+      "user": 12,
+      "sequence": 31,
+      "arrival_s": 189.52971966837578,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 5.0
+    },
+    {
+      "user": 10,
+      "sequence": 20,
+      "arrival_s": 189.64864348753903,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 1,
+      "sequence": 18,
+      "arrival_s": 189.66919431329615,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 7,
+      "sequence": 27,
+      "arrival_s": 190.36374582916866,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 5.0
+    },
+    {
+      "user": 8,
+      "sequence": 26,
+      "arrival_s": 190.87170410373724,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 5.0
+    },
+    {
+      "user": 10,
+      "sequence": 21,
+      "arrival_s": 192.4796887770926,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 1,
+      "sequence": 19,
+      "arrival_s": 192.5732481874789,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 256,
+      "slo_s": 5.0
+    },
+    {
+      "user": 14,
+      "sequence": 26,
+      "arrival_s": 192.63505242499943,
+      "input_tokens": 256,
+      "output_cap": 256,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 8,
+      "sequence": 27,
+      "arrival_s": 194.22186854535516,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 512,
+      "slo_s": 5.0
+    },
+    {
+      "user": 6,
+      "sequence": 19,
+      "arrival_s": 194.44491343518322,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 5.0
+    },
+    {
+      "user": 1,
+      "sequence": 20,
+      "arrival_s": 194.9839084181647,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 384,
+      "slo_s": 5.0
+    },
+    {
+      "user": 14,
+      "sequence": 27,
+      "arrival_s": 195.02545673008692,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 5.0
+    },
+    {
+      "user": 13,
+      "sequence": 24,
+      "arrival_s": 195.73331872827717,
+      "input_tokens": 512,
+      "output_cap": 512,
+      "output_tokens": 256,
+      "slo_s": 9.0
+    },
+    {
+      "user": 10,
+      "sequence": 22,
+      "arrival_s": 196.09781902394664,
+      "input_tokens": 128,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 3.0
+    },
+    {
+      "user": 5,
+      "sequence": 17,
+      "arrival_s": 196.14652760217894,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 96,
+      "slo_s": 5.0
+    },
+    {
+      "user": 1,
+      "sequence": 21,
+      "arrival_s": 196.15169547578995,
+      "input_tokens": 512,
+      "output_cap": 1024,
+      "output_tokens": 1024,
+      "slo_s": 9.0
+    },
+    {
+      "user": 11,
+      "sequence": 21,
+      "arrival_s": 196.33693248814015,
+      "input_tokens": 256,
+      "output_cap": 1024,
+      "output_tokens": 768,
+      "slo_s": 5.0
+    },
+    {
+      "user": 12,
+      "sequence": 32,
+      "arrival_s": 197.30920906009902,
+      "input_tokens": 512,
+      "output_cap": 128,
+      "output_tokens": 64,
+      "slo_s": 9.0
+    },
+    {
+      "user": 13,
+      "sequence": 25,
+      "arrival_s": 198.80468797919298,
+      "input_tokens": 256,
+      "output_cap": 128,
+      "output_tokens": 128,
+      "slo_s": 5.0
+    },
+    {
+      "user": 6,
+      "sequence": 20,
+      "arrival_s": 199.76543856451318,
+      "input_tokens": 256,
+      "output_cap": 512,
+      "output_tokens": 512,
+      "slo_s": 5.0
+    }
+  ]
+}

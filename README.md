@@ -151,6 +151,10 @@ G5 审计能耗来源与固定项，扫描无线条件 × 提供负载，并执�
 .venv/Scripts/python.exe -m edgeinfer g5-run --plan configs/g5.json --out results/g5_new --workers 3
 .venv/Scripts/python.exe -m edgeinfer g5-report results/g5
 .venv/Scripts/python.exe -m edgeinfer g5-replay results/g5 --case think_0.5_atten_40 --method tp_mppo --allocator equal_uplink --replicate 1 --scenario 50001 --out results/g5_replayed
+# 在 Git checkout 中重建全部小规模控制与前沿，重放 24 个主扫描单元，再核对汇总。
+.venv/Scripts/python.exe tools/verify_g5.py results/g5
 ```
 
 当前保存的是 `results/g5`；重新运行必须选用新目录。主扫描有 1620 次完整评估，PPO 为冻结策略的迁移诊断。离线 oracle 明确标注未来信息；精确前沿仅针对单次放置和固定 P2/P3，不代表全时域全局最优。原始表、成对差、图、输入和动作轨迹均保存，能耗仍是未做硬件校准的估算。
+
+先读 [G5 主要发现与去留判断](docs/g5_findings.md)，再看完整报告与原始表。Git checkout 以当前提交记录来源；讨论 ZIP 使用包内 `BUNDLE_INFO.json` 的提交记录，运行 G5 不需要伪造一个 Git 仓库。

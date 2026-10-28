@@ -1,0 +1,42 @@
+{
+  "exact_scan_replays": 24,
+  "regenerated_controls_exact": [
+    "composition.csv",
+    "length.csv",
+    "exact.csv",
+    "exact_frontier.csv"
+  ],
+  "regenerated_summaries_exact": [
+    "scan_summary.csv",
+    "scan_summary.json",
+    "composition_summary.csv",
+    "composition_summary.json",
+    "length_summary.csv",
+    "length_summary.json",
+    "exact_summary.csv",
+    "exact_summary.json",
+    "wireless_differences.csv",
+    "wireless_differences.json",
+    "report.md"
+  ],
+  "versioned_g1_g4_results_unchanged": true,
+  "new_training_runs": 0,
+  "numerical_code_commit": "8fa19d946f5a7266e59c24b09a0afc50a632cabd",
+  "tests_passed": 83,
+  "visual_review": [
+    "energy_decomposition",
+    "wireless_load",
+    "composition_length",
+    "exact_gap"
+  ],
+  "figure_exports": [
+    "png_600dpi",
+    "editable_svg",
+    "pdf"
+  ],
+  "hardware_calibration": false,
+  "scan_rows": 1620,
+  "composition_rows": 120,
+  "length_rows": 60,
+  "exact_rows": 600
+}

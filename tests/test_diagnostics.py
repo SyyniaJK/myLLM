@@ -98,3 +98,10 @@ def test_main_scan_save_and_replay_are_exact(tiny_config,tmp_path,monkeypatch):
     result=replay_g5(tmp_path,saved['case'],'tp_mppo','equal_uplink',1,9,tmp_path/'replay')
     assert result['goodput_window']==saved['goodput_window']
     assert json.loads((tmp_path/'replay'/'replay.json').read_text())['exact']
+
+
+def test_exported_bundle_supplies_explicit_source_provenance(tmp_path,monkeypatch):
+    from edgeinfer.diagnostics import source_commit
+    monkeypatch.chdir(tmp_path)
+    (tmp_path/'BUNDLE_INFO.json').write_text(json.dumps({'commit':'exported-test-commit'}))
+    assert source_commit()=='exported-test-commit'

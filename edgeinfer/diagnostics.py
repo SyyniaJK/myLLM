@@ -231,6 +231,13 @@ def energy_audit(output):
     write_json(Path(output) / "model_audit.json", audit)
 
 
+def source_commit():
+    """Two supported provenance inputs: a Git checkout or an exported bundle."""
+    if Path(".git").exists():
+        return subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
+    return json.loads(Path("BUNDLE_INFO.json").read_text(encoding="utf-8"))["commit"]
+
+
 def run_g5(config_path, output, workers=3):
     output = Path(output)
     assert not output.exists(), "Use a fresh directory; historical experiments are not overwritten."
@@ -238,7 +245,7 @@ def run_g5(config_path, output, workers=3):
     plan = json.loads(Path(config_path).read_text(encoding="utf-8"))
     assert plan["mean_think_s"] == [8.0, 2.0, 0.5]
     plan.update({"format": 1, "methods": list(DEFAULT_METHODS), "base_config": asdict(load_config("configs/paper_aligned.toml")),
-        "runtime": runtime_versions(), "code_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
+        "runtime": runtime_versions(), "code_commit": source_commit(),
         "workload_mode": "fixed", "learned_policy_status": "frozen_nominal_checkpoint_transfer",
         "reference_suite": "results/g123_final", "ablation_root": "results/g4_training"})
     write_json(output / "plan.json", plan)

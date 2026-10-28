@@ -1,0 +1,85 @@
+G5-3 think_8_atten_0/tp/seed 1: 30 episodes
+G5-3 think_8_atten_0/tp/seed 3: 30 episodes
+G5-3 think_8_atten_0/tp/seed 2: 30 episodes
+G5-3 think_8_atten_0/equal_uplink/seed 1: 30 episodes
+G5-3 think_8_atten_0/equal_uplink/seed 2: 30 episodes
+G5-3 think_8_atten_0/equal_uplink/seed 3: 30 episodes
+G5-3 think_8_atten_20/tp/seed 1: 30 episodes
+G5-3 think_8_atten_20/tp/seed 2: 30 episodes
+G5-3 think_8_atten_20/tp/seed 3: 30 episodes
+G5-3 think_8_atten_20/equal_uplink/seed 1: 30 episodes
+G5-3 think_8_atten_20/equal_uplink/seed 2: 30 episodes
+G5-3 think_8_atten_20/equal_uplink/seed 3: 30 episodes
+G5-3 think_8_atten_40/tp/seed 1: 30 episodes
+G5-3 think_8_atten_40/tp/seed 2: 30 episodes
+G5-3 think_8_atten_40/tp/seed 3: 30 episodes
+G5-3 think_8_atten_40/equal_uplink/seed 1: 30 episodes
+G5-3 think_8_atten_40/equal_uplink/seed 2: 30 episodes
+G5-3 think_8_atten_40/equal_uplink/seed 3: 30 episodes
+G5-3 think_2_atten_0/tp/seed 2: 30 episodes
+G5-3 think_2_atten_0/tp/seed 1: 30 episodes
+G5-3 think_2_atten_0/tp/seed 3: 30 episodes
+G5-3 think_2_atten_0/equal_uplink/seed 1: 30 episodes
+G5-3 think_2_atten_0/equal_uplink/seed 2: 30 episodes
+G5-3 think_2_atten_0/equal_uplink/seed 3: 30 episodes
+G5-3 think_2_atten_20/tp/seed 1: 30 episodes
+G5-3 think_2_atten_20/tp/seed 2: 30 episodes
+G5-3 think_2_atten_20/tp/seed 3: 30 episodes
+G5-3 think_2_atten_20/equal_uplink/seed 1: 30 episodes
+G5-3 think_2_atten_20/equal_uplink/seed 2: 30 episodes
+G5-3 think_2_atten_20/equal_uplink/seed 3: 30 episodes
+G5-3 think_2_atten_40/tp/seed 1: 30 episodes
+G5-3 think_2_atten_40/tp/seed 2: 30 episodes
+G5-3 think_2_atten_40/tp/seed 3: 30 episodes
+G5-3 think_2_atten_40/equal_uplink/seed 1: 30 episodes
+G5-3 think_2_atten_40/equal_uplink/seed 2: 30 episodes
+G5-3 think_2_atten_40/equal_uplink/seed 3: 30 episodes
+G5-3 think_0.5_atten_0/tp/seed 1: 30 episodes
+G5-3 think_0.5_atten_0/tp/seed 2: 30 episodes
+G5-3 think_0.5_atten_0/tp/seed 3: 30 episodes
+G5-3 think_0.5_atten_0/equal_uplink/seed 1: 30 episodes
+G5-3 think_0.5_atten_0/equal_uplink/seed 2: 30 episodes
+G5-3 think_0.5_atten_0/equal_uplink/seed 3: 30 episodes
+G5-3 think_0.5_atten_20/tp/seed 1: 30 episodes
+G5-3 think_0.5_atten_20/tp/seed 2: 30 episodes
+G5-3 think_0.5_atten_20/tp/seed 3: 30 episodes
+G5-3 think_0.5_atten_20/equal_uplink/seed 1: 30 episodes
+G5-3 think_0.5_atten_20/equal_uplink/seed 2: 30 episodes
+G5-3 think_0.5_atten_20/equal_uplink/seed 3: 30 episodes
+G5-3 think_0.5_atten_40/tp/seed 1: 30 episodes
+G5-3 think_0.5_atten_40/tp/seed 2: 30 episodes
+G5-3 think_0.5_atten_40/tp/seed 3: 30 episodes
+G5-3 think_0.5_atten_40/equal_uplink/seed 1: 30 episodes
+G5-3 think_0.5_atten_40/equal_uplink/seed 2: 30 episodes
+G5-3 think_0.5_atten_40/equal_uplink/seed 3: 30 episodes
+G5-3 complete; running controlled snapshots and length errors
+G5-6 seed 50000/slo_1_atten_0: all 4096 placements evaluated
+G5-6 seed 50000/slo_1_atten_40: all 4096 placements evaluated
+G5-6 seed 50000/slo_2_atten_0: all 4096 placements evaluated
+G5-6 seed 50000/slo_2_atten_40: all 4096 placements evaluated
+G5-6 seed 50000/slo_4_atten_0: all 4096 placements evaluated
+G5-6 seed 50000/slo_4_atten_40: all 4096 placements evaluated
+G5-6 seed 50001/slo_1_atten_0: all 4096 placements evaluated
+G5-6 seed 50001/slo_1_atten_40: all 4096 placements evaluated
+G5-6 seed 50001/slo_2_atten_0: all 4096 placements evaluated
+G5-6 seed 50001/slo_2_atten_40: all 4096 placements evaluated
+G5-6 seed 50001/slo_4_atten_0: all 4096 placements evaluated
+G5-6 seed 50001/slo_4_atten_40: all 4096 placements evaluated
+G5-6 seed 50002/slo_1_atten_0: all 4096 placements evaluated
+G5-6 seed 50002/slo_1_atten_40: all 4096 placements evaluated
+G5-6 seed 50002/slo_2_atten_0: all 4096 placements evaluated
+G5-6 seed 50002/slo_2_atten_40: all 4096 placements evaluated
+G5-6 seed 50002/slo_4_atten_0: all 4096 placements evaluated
+G5-6 seed 50002/slo_4_atten_40: all 4096 placements evaluated
+G5-6 seed 50003/slo_1_atten_0: all 4096 placements evaluated
+G5-6 seed 50003/slo_1_atten_40: all 4096 placements evaluated
+G5-6 seed 50003/slo_2_atten_0: all 4096 placements evaluated
+G5-6 seed 50003/slo_2_atten_40: all 4096 placements evaluated
+G5-6 seed 50003/slo_4_atten_0: all 4096 placements evaluated
+G5-6 seed 50003/slo_4_atten_40: all 4096 placements evaluated
+G5-6 seed 50004/slo_1_atten_0: all 4096 placements evaluated
+G5-6 seed 50004/slo_1_atten_40: all 4096 placements evaluated
+G5-6 seed 50004/slo_2_atten_0: all 4096 placements evaluated
+G5-6 seed 50004/slo_2_atten_40: all 4096 placements evaluated
+G5-6 seed 50004/slo_4_atten_0: all 4096 placements evaluated
+G5-6 seed 50004/slo_4_atten_40: all 4096 placements evaluated
