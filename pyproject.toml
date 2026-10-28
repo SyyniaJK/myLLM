@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "edge-inference-lab"
-version = "0.1.0"
+version = "0.2.0"
 description = "Wireless edge LLM simulation, scheduling baselines, and passive energy accounting"
 requires-python = ">=3.11"
 dependencies = ["numpy>=2.0", "torch>=2.5", "gymnasium>=1.0", "matplotlib>=3.9"]

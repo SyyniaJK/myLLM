@@ -206,6 +206,20 @@ def main():
     replay_run.add_argument("--replicate", type=int, required=True)
     replay_run.add_argument("--scenario", type=int, required=True)
     replay_run.add_argument("--out", required=True)
+    gap = commands.add_parser("g5-run", help="Run the fixed research-gap diagnostic plan without training")
+    gap.add_argument("--plan", default="configs/g5.json")
+    gap.add_argument("--out", default="results/g5")
+    gap.add_argument("--workers", type=int, default=3)
+    gap_report = commands.add_parser("g5-report")
+    gap_report.add_argument("directory")
+    gap_replay = commands.add_parser("g5-replay")
+    gap_replay.add_argument("directory")
+    gap_replay.add_argument("--case", required=True)
+    gap_replay.add_argument("--method", required=True)
+    gap_replay.add_argument("--allocator", choices=["tp", "equal_uplink"], required=True)
+    gap_replay.add_argument("--replicate", type=int, required=True)
+    gap_replay.add_argument("--scenario", type=int, required=True)
+    gap_replay.add_argument("--out", required=True)
     args = parser.parse_args()
     if args.command == "train":
         train(load_config(args.config), args.seed, args.steps, args.out,
@@ -253,6 +267,15 @@ def main():
     elif args.command == "benchmark-replay":
         from .benchmark import replay_benchmark
         replay_benchmark(args.directory, args.case, args.mode, args.method, args.replicate, args.scenario, args.out)
+    elif args.command == "g5-run":
+        from .diagnostics import run_g5
+        run_g5(args.plan, args.out, args.workers)
+    elif args.command == "g5-report":
+        from .gap_analysis import analyze_g5
+        analyze_g5(Path(args.directory))
+    elif args.command == "g5-replay":
+        from .diagnostics import replay_g5
+        replay_g5(args.directory, args.case, args.method, args.allocator, args.replicate, args.scenario, args.out)
 
 
 if __name__ == "__main__":

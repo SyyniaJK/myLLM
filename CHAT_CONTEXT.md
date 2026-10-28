@@ -1,6 +1,6 @@
 # 新聊天从这里开始
 
-这是 EdgeInferenceLab 的 G1–G4 基线交接材料。研究的最终目标是发表论文：在无线边缘 LLM 推理卸载场景中，联合考虑通信与计算能耗，并在统一环境中评价优化方法。TP-MPPO 是需要复现和比较的基线，平台不以某一算法命名。
+这是 EdgeInferenceLab 的 G1–G5 交接材料。研究的最终目标是发表论文：在无线边缘 LLM 推理卸载场景中，联合考虑通信与计算能耗，并在统一环境中评价优化方法。TP-MPPO 是需要复现和比较的基线，平台不以某一算法命名。
 
 ## 建议阅读顺序
 
@@ -10,6 +10,7 @@
 4. `docs/g4_contract.md`、`docs/g4_verification.md`：统一比较与已验证的交付能力。
 5. `results/g4/benchmark/report.md`、`summary.csv`、`paired_differences.csv` 和 `figures/`：实际实验结果。
 6. `edgeinfer/`、`tests/`：实现与契约测试；`examples/custom_policy.py` 演示新方法接入。
+7. `docs/g5_contract.md`、`results/g5/report.md`：六组研究问题诊断、信息边界和条件精确前沿。`docs/g5_literature_scope.md` 说明文献重合清单的核查范围。
 
 讨论 ZIP 额外包含 `references/TP-MPPO.md`、`references/TPO-PPO.md` 和对应 PDF；这些原始材料不纳入公共 Git 仓库。PDF 可用于核对 Markdown 转换后的公式与图表。版本和完整文件列表见 ZIP 内的 `BUNDLE_INFO.json` 与 `BUNDLE_CONTENTS.txt`。
 
@@ -32,7 +33,9 @@
 
 ## 后续研究状态
 
-基础平台已完成；新的节能优化机制与论文创新点尚未实现或验证。后续应从已确定的最小模型出发，保留相同环境和强启发式对照，明确改变了目标函数、约束、观测还是优化机制，再进行可检验的实验。现有结果不能直接当作新方法的论文结论。
+基础平台与 G5 诊断已完成；新的节能优化机制与论文创新点尚未实现或验证。G5 不重新训练策略，区分窗口能耗和完整批次成本、可见 cap 代理与未来信息 oracle，并将精确性限制为固定资源规则下的单次放置。硬件校准与选定机制的最新文献全文核查仍未完成。
+
+后续应从已确定的最小模型出发，保留相同环境和强启发式对照，明确改变了目标函数、约束、观测还是优化机制，再进行可检验的实验。现有结果不能直接当作新方法的论文结论。
 
 ## 用户的编程约定
 

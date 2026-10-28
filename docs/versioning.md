@@ -26,9 +26,9 @@ git push
 每完成一个可解释的改动提交一次。发布里程碑时同步修改 `pyproject.toml` 的版本号与 `CHANGELOG.md`，完成验证后创建相同版本的标签：
 
 ```powershell
-git tag -a v0.2.0 -m "Describe this milestone"
+git tag -a v0.3.0 -m "Describe this milestone"
 git push origin main
-git push origin v0.2.0
+git push origin v0.3.0
 ```
 
 标签用于固定论文中的代码/实验版本；以后新增方法不会改写 `v0.1.0` 的结果。
@@ -38,7 +38,7 @@ git push origin v0.2.0
 打包工具仅导出当前 **已提交且带版本标签** 的 Git 快照，要求版本号与标签对应。它不会把未提交修改、虚拟环境或忽略目录混入 ZIP。额外参考文件由命令明确给出。
 
 ```powershell
-.venv/Scripts/python.exe tools/build_chat_bundle.py --out dist/EdgeInferenceLab-v0.1.0-chat.zip --references ../TP-MPPO.md ../TPO-PPO.md ../TP-MPPO.pdf ../TPO-PPO.pdf
+.venv/Scripts/python.exe tools/build_chat_bundle.py --out dist/EdgeInferenceLab-v0.2.0-chat.zip --references ../TP-MPPO.md ../TPO-PPO.md ../TP-MPPO.pdf ../TPO-PPO.pdf
 ```
 
 ZIP 内有单一 `EdgeInferenceLab/` 根目录，先阅读 `CHAT_CONTEXT.md`。`BUNDLE_INFO.json` 记录版本标签、Git 提交编号、远程仓库与额外参考文件；`BUNDLE_CONTENTS.txt` 列出完整包内容。包内没有另行计算内容摘要；文件由 Git 快照直接导出，并用 ZIP 自带的完整性检查验证。
@@ -50,7 +50,7 @@ ZIP 内有单一 `EdgeInferenceLab/` 根目录，先阅读 `CHAT_CONTEXT.md`。`
 ```powershell
 git clone https://github.com/SyyniaJK/myLLM.git
 cd myLLM
-git checkout v0.1.0
+git checkout v0.2.0
 python -m venv .venv
 .venv/Scripts/python.exe -m pip install -r requirements.txt
 .venv/Scripts/python.exe -m pip install -e . --no-deps

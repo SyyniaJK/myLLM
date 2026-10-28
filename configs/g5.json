@@ -1,0 +1,13 @@
+{
+  "seeds": [50000, 50001, 50002, 50003, 50004],
+  "replicates": [1, 2, 3],
+  "attenuation_db": [0, 20, 40],
+  "mean_think_s": [8.0, 2.0, 0.5],
+  "allocators": ["tp", "equal_uplink"],
+  "snapshot_slo_s": [1.0, 2.0, 4.0],
+  "snapshot_attenuation_db": [0, 40],
+  "memory_gb": [16.0, 24.0],
+  "estimators": ["cap", "conditional_mean", "half_cap", "oracle", "oracle_half", "oracle_over"],
+  "bootstrap_samples": 2000,
+  "stats_seed": 551
+}

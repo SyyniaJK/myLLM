@@ -2,9 +2,9 @@
 
 无线边缘 LLM 推理科研基础平台。首个基线为 **TP-MPPO**；环境、物理公式、随机过程、指标与能耗观察器独立于策略。
 
-已实现 G1 系统修复、G2 真实训练/独立评估、G3 被动能耗核算和 G4 统一算法比较。原 ZIP 与解压目录保留在父目录，未覆盖。没有加入新研究算法。
+已实现 G1 系统修复、G2 真实训练/独立评估、G3 被动能耗核算、G4 统一算法比较及 G5 研究问题诊断。原 ZIP 与解压目录保留在父目录，未覆盖。没有加入新研究算法。
 
-当前版本 **0.1.0**。仓库：[SyyniaJK/myLLM](https://github.com/SyyniaJK/myLLM)。新聊天可先阅读 [项目交接说明](CHAT_CONTEXT.md)；提交、版本标签和讨论 ZIP 的生成方法见 [版本管理说明](docs/versioning.md)。
+当前版本 **0.2.0**。仓库：[SyyniaJK/myLLM](https://github.com/SyyniaJK/myLLM)。新聊天可先阅读 [项目交接说明](CHAT_CONTEXT.md)；提交、版本标签和讨论 ZIP 的生成方法见 [版本管理说明](docs/versioning.md)。
 
 ## 从哪里看
 
@@ -14,6 +14,7 @@
 - [本次正式实验报告](results/g123_final/report.md)、[汇总原始数据](results/g123_final/summary.csv)。
 - [G1 测试结果](results/g1_tests.txt)。
 - [G4 对比契约](docs/g4_contract.md)、[G4 实验报告](results/g4/benchmark/report.md)、[G4 完成与验证记录](docs/g4_verification.md)、[G4 测试结果](results/g4_tests.txt)。
+- [G5 诊断契约](docs/g5_contract.md)、[G5 研究问题诊断结果](results/g5/report.md)。
 
 ## 安装
 
@@ -141,3 +142,15 @@ def build(config, replicate_seed):
 实现的是论文兼容公式和 TP-MPPO 核心，不能把本版称为论文所有图表的精确复现。原文未公开的数值和下行失败语义已在模型契约中列明。TP-PPO 已作为同预算无掩码消融实现；全变量 MPPO、Rewardless、文献中的加权 Heuristic、真实 GPU 校准及后续创新机制尚未加入。
 
 `results/smoke`、`results/seed2_diagnostic` 是短程调试记录；`results/g123` 是浮点归一化契约修正前的失败尝试。正式报告只使用 `results/g123_final`。
+
+## G5：研究问题诊断
+
+G5 审计能耗来源与固定项，扫描无线条件 × 提供负载，并执行 SLO/批次组成、长度估计误差和小规模精确放置对照。不新增神经网络、不重新训练策略、不覆盖 G1–G4。
+
+```powershell
+.venv/Scripts/python.exe -m edgeinfer g5-run --plan configs/g5.json --out results/g5_new --workers 3
+.venv/Scripts/python.exe -m edgeinfer g5-report results/g5
+.venv/Scripts/python.exe -m edgeinfer g5-replay results/g5 --case think_0.5_atten_40 --method tp_mppo --allocator equal_uplink --replicate 1 --scenario 50001 --out results/g5_replayed
+```
+
+当前保存的是 `results/g5`；重新运行必须选用新目录。主扫描有 1620 次完整评估，PPO 为冻结策略的迁移诊断。离线 oracle 明确标注未来信息；精确前沿仅针对单次放置和固定 P2/P3，不代表全时域全局最优。原始表、成对差、图、输入和动作轨迹均保存，能耗仍是未做硬件校准的估算。
