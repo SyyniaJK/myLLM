@@ -49,7 +49,10 @@ def main():
         bundle.writestr(PREFIX + "BUNDLE_INFO.json", json.dumps(info, ensure_ascii=False, indent=2) + "\n")
         contents = sorted(bundle.namelist() + [PREFIX + "BUNDLE_CONTENTS.txt"])
         bundle.writestr(PREFIX + "BUNDLE_CONTENTS.txt", "\n".join(contents) + "\n")
-        assert bundle.testzip() is None
+    # Validate the finalized archive, after all entry headers have been written.
+    with ZipFile(BytesIO(archive.getvalue())) as bundle:
+        bad_entry = bundle.testzip()
+        assert bad_entry is None, f"ZIP CRC mismatch: {bad_entry}"
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_bytes(archive.getvalue())
     print(json.dumps({"path": str(output), "bytes": output.stat().st_size,
